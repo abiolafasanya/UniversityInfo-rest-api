@@ -1,2 +1,14 @@
 *.sqlite
 *.sqlite-journal
+.env
+.env.example
+storage
+tests
+.editorconfig
+webpack.mix.js
+phpunit.xml
+artisan
+.styleci.yml
+vendor
+.gitattributes
+.gitignore
