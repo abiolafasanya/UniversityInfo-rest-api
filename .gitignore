@@ -11,3 +11,15 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+.env.example
+storage
+tests
+.editorconfig
+webpack.mix.js
+.xml
+artisan
+.yml
+vendor
+gitattributes
+.gitignore

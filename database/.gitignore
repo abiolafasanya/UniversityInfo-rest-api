@@ -1,14 +1,2 @@
 *.sqlite
 *.sqlite-journal
-*.env
-*.env.example
-*storage
-*tests
-*.editorconfig
-*webpack.mix.js
-*.xml
-*artisan
-*.yml
-*vendor
-*gitattributes
-*.gitignore
