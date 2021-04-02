@@ -9,12 +9,12 @@
 /storage
 /tests
 .editorconfig
-webpack.mix.js
-.xml
-artisan
-styleci.yml
-gitattributes
-.gitignore
+# webpack.mix.js
+# .xml
+# artisan
+# styleci.yml
+# gitattributes
+# .gitignore
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
