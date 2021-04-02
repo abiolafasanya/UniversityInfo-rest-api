@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 // Public Route
 // Route::resource('universities', UniController::class);
 Route::post('/register', [UserController::class, 'register']);
+Route::post('/login', [UserController::class, 'login']);
 Route::get('/universities', [UniController::class, 'index']);
 Route::get('/universities/{id}', [UniController::class, 'show']);
 Route::get('/universities/search/{name}', [UniController::class, 'search']);
@@ -28,6 +29,7 @@ Route::get('/universities/search/{name}', [UniController::class, 'search']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('/universities', [UniController::class, 'store']);
+    Route::post('/logout', [UserController::class, 'logout']);
     Route::put('/universities/{id}', [UniController::class, 'update']);
     Route::delete('/universities/{id}', [UniController::class, 'destroy']);
     
