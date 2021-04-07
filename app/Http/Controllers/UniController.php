@@ -28,8 +28,13 @@ class UniController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'type' => 'required',
-            'location' => 'required'
+            'name' => 'required',
+            'name' => 'required',
+            'jamb_cutoff' => 'required',
+            'name' => 'required',
+
+            
+            
         ]);
         return University::create($request->all());
     }

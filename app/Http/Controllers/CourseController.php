@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -13,7 +15,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        return Course::all();
     }
 
     /**
@@ -24,7 +26,16 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'course_name' => 'required',
+            'description' => 'required',
+            'jamb_cutoff' => 'required',
+            'waec_subjects' => 'required',
+            'universities' => 'required',
+            'duration' => 'required'
+        ]);
+
+        return Course::create($request->all());
     }
 
     /**
@@ -35,7 +46,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+        return Course::find($id);
     }
 
     /**
@@ -47,7 +58,9 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $course = Course::find($id);
+        $course->update($request->all());
+        return $course;
     }
 
     /**
@@ -58,6 +71,20 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if($course = Course::destroy($id)){
+            $message = array('message' => 'course has been removed');
+            return $message;
+        }
+    }
+
+        /**
+     * Search resource from storage.
+     *
+     * @param  str  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search($name)
+    {
+        return $course = Course::where('course_name', 'like', '%'.$course_name.'%')->get();
     }
 }
