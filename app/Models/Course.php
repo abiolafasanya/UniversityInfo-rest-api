@@ -21,13 +21,3 @@ class Course extends Model
         'duration'
     ];    
 }
-
-$table->string('course_name');
-            $table->text('description');
-            $table->string('jamb_cutoff');
-            $table->text('waec_subjects');
-            $table->text('universities');
-            $table->text('career_opportunities');
-            $table->text('professional_exams');
-            $table->text('additional_skills');
-            $table->string('duration');
