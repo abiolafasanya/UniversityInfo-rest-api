@@ -12,8 +12,8 @@ class Course extends Model
     protected $fillable = [
         'course_title',
         'description',
-        'jamb_subjects',
         'waec_subjects',
+        'jamb_subject',
         'universities',
         'career_opportunities',
         'professional_exams',

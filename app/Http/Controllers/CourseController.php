@@ -30,6 +30,7 @@ class CourseController extends Controller
             'course_title' => 'required',
             'description' => 'required',
             'waec_subjects' => 'required',
+            'jamb_subject' => 'required',
             'universities' => 'required',
             'duration' => 'required'
         ]);
