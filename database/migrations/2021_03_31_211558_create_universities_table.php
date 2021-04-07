@@ -17,7 +17,6 @@ class CreateUniversitiesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
-            $table->string('jamb_cutoff');
             $table->string('location');
             $table->string('slug');
             $table->timestamps();
