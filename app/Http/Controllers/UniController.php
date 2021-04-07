@@ -80,8 +80,8 @@ class UniController extends Controller
      * @param  str  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($name)
+    public function search($search)
     {
-        return $university = University::where('name', 'like', '%'.$institution_name.'%')->get();
+        return $university = University::where('name', 'like', '%'.$search.'%')->get();
     }
 }
