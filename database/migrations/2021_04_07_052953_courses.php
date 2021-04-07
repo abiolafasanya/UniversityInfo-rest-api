@@ -24,8 +24,6 @@ class Courses extends Migration
             $table->text('professional_exams');
             $table->text('additional_skills');
             $table->string('duration');
-            $table->string('location');
-            $table->string('slug');
             $table->timestamps();
         });
     }
