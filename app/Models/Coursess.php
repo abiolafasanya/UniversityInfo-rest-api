@@ -20,4 +20,5 @@ class Course extends Model
         'additional_skills',
         'duration'
     ];
+
 }

@@ -15,14 +15,14 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('course_name');
+            $table->text('course_title');
             $table->text('description');
-            $table->text('jamb_subject');
             $table->text('waec_subjects');
+            $table->text('jamb_subject');
             $table->text('universities');
-            $table->text('career_opportunities');
-            $table->text('professional_exams');
-            $table->text('additional_skills');
+            $table->text('career_opportunities')->nullable();
+            $table->text('professional_exams')->nullable();
+            $table->text('additional_skills')->nullable();
             $table->string('duration');
             $table->timestamps();
         });

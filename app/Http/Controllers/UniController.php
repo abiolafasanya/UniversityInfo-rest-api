@@ -27,7 +27,7 @@ class UniController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'institution_name' => 'required',
             'type' => 'required',
             'location' => 'required',
             'slug' => 'required',    
@@ -82,6 +82,6 @@ class UniController extends Controller
      */
     public function search($name)
     {
-        return $university = University::where('name', 'like', '%'.$name.'%')->get();
+        return $university = University::where('name', 'like', '%'.$institution_name.'%')->get();
     }
 }

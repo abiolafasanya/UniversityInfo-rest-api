@@ -10,9 +10,10 @@ class University extends Model
     use HasFactory;
 
     protected $fillable = [
-        'institution_name',
+        'name',
         'type',
         'location',
         'slug'
     ];
+
 }
