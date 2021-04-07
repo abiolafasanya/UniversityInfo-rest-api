@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Courses extends Migration
+class CreateCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,13 +16,13 @@ class Courses extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('course_name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('jamb_cutoff');
             $table->text('waec_subjects');
             $table->text('universities');
-            $table->text('career_opportunities');
-            $table->text('professional_exams');
-            $table->text('additional_skills');
+            $table->text('career_opportunities')->nullable();
+            $table->text('professional_exams')->nullable();
+            $table->text('additional_skills')->nullable();
             $table->string('duration');
             $table->timestamps();
         });

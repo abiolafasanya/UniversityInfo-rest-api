@@ -9,15 +9,5 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'course_name',
-        'description',
-        'jamb_cutoff',
-        'waec_subjects',
-        'universities',
-        'career_opportunities',
-        'professional_exams',
-        'additional_skills',
-        'duration'
-    ];    
+    
 }
