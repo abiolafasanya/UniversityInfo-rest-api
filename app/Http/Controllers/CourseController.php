@@ -29,7 +29,6 @@ class CourseController extends Controller
         $request->validate([
             'course_name' => 'required',
             'description' => 'required',
-            'jamb_cutoff' => 'required',
             'waec_subjects' => 'required',
             'universities' => 'required',
             'duration' => 'required'
