@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Response;
+
 use App\Models\University;
 
 use Illuminate\Http\Request;
@@ -80,21 +82,20 @@ class UniController extends Controller
      * @param  str  $id
      * @return \Illuminate\Http\Response
      */
-    public function search(Request $request, $search)
+    public function search(Request $request)
     {
         $search = $request->get('search');
 
         $university = University::where('slug', 'like', "%{$search}%")
         ->orWhere('institution_name', 'like', "%{$search}%")
+        ->orWhere('location', 'like', "%{$search}%")
+        ->orWhere('type', 'like', "%{$search}%")
          ->get();
 
-         if(!$university){
-            $message = array('message' => 'result not found');
-            return $message;
-         }
-         else{
-             return $university;
-         }
+            return Response::json([
+                'data' => $university
+            ]); 
+
              
     }
 }
