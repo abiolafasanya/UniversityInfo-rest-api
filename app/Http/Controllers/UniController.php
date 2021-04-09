@@ -79,7 +79,7 @@ class UniController extends Controller
     /**
      * Search resource from storage.
      *
-     * @param  str  $id
+     * @param  str  $search
      * @return \Illuminate\Http\Response
      */
     public function search(Request $request)
@@ -92,9 +92,11 @@ class UniController extends Controller
         ->orWhere('type', 'like', "%{$search}%")
          ->get();
 
-            return Response::json([
-                'data' => $university
-            ]); 
+         return $university;
+
+            // return Response::json([
+            //     'data' => $university
+            // ]); 
 
              
     }
