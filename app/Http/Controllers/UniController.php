@@ -98,7 +98,3 @@ class UniController extends Controller
              
     }
 }
-                        
-    // return $university = University::where('slug', 'like', '%'.$search.'%')->get();
-    // $term = 'institution_name' || 'slug' || 'location' || 'type';
-
