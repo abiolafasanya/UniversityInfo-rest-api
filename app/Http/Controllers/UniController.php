@@ -92,11 +92,9 @@ class UniController extends Controller
         ->orWhere('type', 'like', "%{$search}%")
          ->get();
 
-         return $university;
-
-            // return Response::json([
-            //     'data' => $university
-            // ]); 
+            return Response::json([
+                'data' => $university
+            ]); 
 
              
     }
