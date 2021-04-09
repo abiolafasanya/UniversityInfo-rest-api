@@ -80,7 +80,7 @@ class UniController extends Controller
      * @param  str  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($search)
+    public function search(Request $request, $search)
     {
         $search = $request->get('search');
 
