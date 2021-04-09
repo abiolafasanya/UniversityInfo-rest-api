@@ -28,14 +28,14 @@
                                <div class="col-4">
                                 <input type="text" name="value" class="form-control">
                                </div>
-                           </div>
-                       </div>
-
-                       @endfor
-                       <div class="form-group">
-                           <button type="submit" class="btn btn-primary">Add</button>
-                       </div>
-                   </form>
+                        </div>
+                           
+                           @endfor
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                
                 </div>
             </div>
         </div>
