@@ -82,6 +82,6 @@ class UniController extends Controller
      */
     public function search($search)
     {
-        return $university = University::where('name', 'like', '%'.$search.'%')->get();
+        return $university = University::where('institution_name', 'like', '%'.$search.'%')->get();
     }
 }
