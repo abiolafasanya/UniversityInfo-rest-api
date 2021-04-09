@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Response;
-
 use App\Models\University;
 
 use Illuminate\Http\Request;
@@ -90,10 +88,14 @@ class UniController extends Controller
         ->orWhere('institution_name', 'like', "%{$search}%")
          ->get();
 
-        return Response::json([
-            'search' => $university
-            ]);                
-                             
+         if(!$university){
+            $message = array('message' => 'result not found');
+            return $message;
+         }
+         else{
+             return $university;
+         }
+             
     }
 }
                         
