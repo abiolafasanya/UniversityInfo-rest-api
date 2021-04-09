@@ -79,7 +79,7 @@ class UniController extends Controller
     /**
      * Search resource from storage.
      *
-     * @param  str  $search
+     * @param  str  $id
      * @return \Illuminate\Http\Response
      */
     public function search(Request $request) 
