@@ -19,18 +19,7 @@
                             <label for="discription">Description</label>
                             <input type="text" name="description" class="form-control">
                        </div>
-                       <div class="form-group">
-                           @for($i=0; $i<4; $i++)
-                       <div class="row">
-                               <div class="col-2">
-                                <input type="text" name="key" class="form-control">
-                               </div>
-                               <div class="col-4">
-                                <input type="text" name="value" class="form-control">
-                               </div>
-                        </div>
-                           
-                           @endfor
+
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Add</button>
                         </div>
