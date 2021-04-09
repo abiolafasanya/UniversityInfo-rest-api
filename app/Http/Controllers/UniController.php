@@ -82,9 +82,8 @@ class UniController extends Controller
      * @param  str  $search
      * @return \Illuminate\Http\Response
      */
-    public function search(Request $request, $data)
+    public function search($search)
     {
-        $search = $request->get($data);
 
         $university = University::where('slug', 'like', "%{$search}%")
         ->orWhere('institution_name', 'like', "%{$search}%")
