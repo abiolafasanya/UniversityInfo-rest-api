@@ -79,13 +79,12 @@ class UniController extends Controller
     /**
      * Search resource from storage.
      *
-     * @param  str  $id
+     * @param  str  $search
      * @return \Illuminate\Http\Response
      */
-    public function search(Request $request) 
+    public function search($search)
     {
-        $search = $request->get('data');
-
+  
         $university = University::where('slug', 'like', "%{$search}%")
         ->orWhere('institution_name', 'like', "%{$search}%")
         ->orWhere('location', 'like', "%{$search}%")
