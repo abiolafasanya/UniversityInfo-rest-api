@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 
+use Illuminate\Support\Facades\Response;
+
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -85,6 +87,11 @@ class CourseController extends Controller
      */
     public function search($search)
     {
-        return $course = Course::where('course_title', 'like', '%'.$search.'%')->get();
+        $course = Course::where('course_title', 'like', '%'.$search.'%')->get();
+
+            return Response::json([
+                'data' => $course
+            ]); 
+
     }
 }
