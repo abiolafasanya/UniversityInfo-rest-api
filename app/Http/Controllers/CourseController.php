@@ -85,8 +85,10 @@ class CourseController extends Controller
      * @param  str  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($search)
+    public function search(Request $request) 
     {
+
+        $search = $request->get('data');
         $course = Course::where('course_title', 'like', '%'.$search.'%')->get();
 
             return Response::json([
